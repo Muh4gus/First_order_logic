@@ -1,0 +1,11 @@
+ayah(slamet, ramdani).
+ayah(slamet, jeki).
+ayah(amin, agus).
+ayah(amin, putri).
+ayah(anang, nisa).
+ayah(anang,patur).
+
+is_ayah(X,Y) :-ayah(X,Y).
+is_anak(Y,X) :-ayah(X,Y).
+is_sodara(Y,X) :-ayah(X,Y), ayah(X,Z).
+is_kakek(X,Y) :- ayah(X,Y), is_ayah(Y,Z).
